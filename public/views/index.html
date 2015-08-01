@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="guildBossApp" ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>Guild Boss</title>
+	<link rel="stylesheet" href="dist/css/style.min.css">
+	
+	<script src="jquery/dist/node-jquery.min.js"></script>
+	<script src="jquery-ui/jquery-ui.js"></script>
+	<script src="angular/angular.js"></script>
+	<script src="angular-route/angular-route.js"></script>
+	<script src="dist/js/app.min.js"></script>
+	<script src="satellizer/satellizer.js"></script>
+</head>
+<body ng-controller="AppCtrl">
+	<div class="plsWt" ng-show="working">
+		<div><i class="fa fa-cog fa-spin"></i></div>
+	</div>
+	<div class="mainWindow" ng-view></div>
+</body>
+</html>

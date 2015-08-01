@@ -1,0 +1,27 @@
+<div class="navWindow" >
+	<div ng-include="include"/>
+</div>
+
+<div class="panelHolder">
+	<h1>{{guildName}}</h1>
+	<div class="panel">
+		<div class="panelSpacer">
+			<span>{{guildMS}}</span>
+		</div>
+	</div>
+</div>
+
+<div class="panelHolder">
+	<h3>Divisions:</h3>
+	<div class="panel" ng-repeat="division in divisions">
+		<div class="panelSpacer">
+			<a href="{{division.url}}">{{division.divisionName}}</a>
+		</div>
+	</div>
+	<h3>Hirelings:</h3>
+	<div class="panel">
+		<div class="panelSpacer">
+			<div class="charSlider" ng-include="charSlideView" autoscroll="false"></div>
+		</div>
+	</div>
+</div>

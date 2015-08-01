@@ -1,0 +1,35 @@
+<div ng-controller="CharCtrl">
+	<h1>Character - {{char.name}}</h1>
+	<h3>Vital Statistics</h3>
+	<button ng-click="prev">Previous</button>
+	<button ng-click="next">Next</button>
+	<div class="panelHolder">
+		<div class="panel">
+			<div class="panelSpacer">
+				<div class="attrib">
+					<label for="level">Level:<input readonly="" ng-model="char.level"/></label>
+				</div>
+				<div class="attrib">
+					<label for="role">Role<input id="role" type="text" ng-model="char.role"/></label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button ng-click="$scope.dismiss(char.id)">Dismiss!</button>
+	<hr>
+	<div class="panelHolder">
+		<div class="panel halfPanel">
+			<div class="panelSpacer">
+				<div ng-repeat="attrib in char.priAttribs" class="attrib">
+					<label for="{{attrib.id}}">{{attrib.name}}<input id="{{attrib.id}}" type="{{attrib.type}}" ng-model="attrib.value"/></label>
+				</div>
+			</div>
+		</div>
+		<div class="panel halfPanel">
+			<div class="panelSpacer">
+				<div ng-repeat="attrib in char.secAttribs" class="attrib">
+					<label for="{{attrib.id}}">{{attrib.name}}<input id="{{attrib.id}}" type="{{attrib.type}}" ng-model="attrib.value"/></label>
+			</div>
+		</div>
+	</div>
+</div>

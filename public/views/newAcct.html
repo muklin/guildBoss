@@ -1,0 +1,33 @@
+<div class="dialogue panelHolder left" ng-controller="NewAcctCtrl">
+	<div class="panel">
+		<div class="panelSpacer">
+			<form id="newAcct">
+				<div class="attrib"><label>First Name:<input ng-model="userDtls.firstName"/></label></div>
+				<div class="attrib"><label>Last Name:<input ng-model="userDtls.lastName"/></label></div>
+				
+				<div class="attrib"><label>Email Address:<input ng-model="userDtls.email"/></label></div>
+				<div class="attrib"><label>Password:<input type="password" ng-model="userDtls.password"/></label></div>
+				<div class="attrib">
+					<label>
+						Account Type:
+						<select ng-model="userDtls.acctType" ng-options="type.name for type in acctTypeOptions track by type.id">
+							<option value="">-- select --</option>
+						</select>
+					</label>
+				</div>
+				<div class="attrib" ng-show="userDtls.acctType.id=='1'"><label>Campaign Code:<input ng-model="userDtls.campaignCode"/></label></div>
+				
+				<div class="attrib">{{message}}}</div>				
+				<div class="attrib" ng-show="newCreated"><button ng-click="goLogin()">Return to Login</button></div>
+				<div class="attrib" ng-show="newCreated"><button ng-click="create()">Create</button></div>
+
+				<!--hr>
+				<div class="attrib"><button class="fbBlue" ng-click="authenticate('facebook')">Create using Facebook</button></div>
+				<div class="attrib"><button class="gglRed" ng-click="authenticate('google')">Create using Google</button></div>
+				<span>Or </span-->
+
+				
+			</form>
+		</div>
+	</div>
+</div>

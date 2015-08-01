@@ -1,0 +1,16 @@
+<div class="dialogue panelHolder left" ng-controller="LoginCtrl">
+	<div class="panel">
+		<div class="panelSpacer">
+			<form id="login">
+				<div class="attrib"><label>Email Address:<input ng-model="userDtls.username"/></label></div>
+				<div class="attrib"><label>Password:<input type="password" ng-model="userDtls.password"/></label></div>
+				<div>{{message}}</div>
+				
+				<div class="attrib"><button ng-click="login()">Login</button></div>
+				<!--div class="attrib"><button class="fbBlue" ng-click="authenticate('facebook')">Sign in with Facebook</button></div>
+				<div class="attrib"><button class="gglRed" ng-click="authenticate('google')">Sign in with Google</button></div-->
+				<div class="attrib"><button ng-click="newAcct()">Create a new Account</button></div>
+			</form>
+		</div>
+	</div>
+</div>
